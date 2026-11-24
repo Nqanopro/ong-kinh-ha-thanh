@@ -8,9 +8,7 @@ Website tĩnh giới thiệu câu lạc bộ nhiếp ảnh và các hoạt độ
 - **Repository:** [github.com/Nqanopro/ong-kinh-ha-thanh](https://github.com/Nqanopro/ong-kinh-ha-thanh)
 - **GitHub Pages:** [https://nqanopro.github.io/ong-kinh-ha-thanh/](https://nqanopro.github.io/ong-kinh-ha-thanh/)
 - **Nguồn xuất bản dự kiến:** nhánh `main`, thư mục `/` (root).
-- **Mã nguồn đối chiếu tại thời điểm ghi tài liệu:** `f6035acb64da6d015ef546cd70065d04a30f6ab7` (`main`, `origin/main`). Lịch sử hiện có tag `v1`; chưa thấy tag `v8`. `v8` trong hồ sơ này là mã phiên bản bàn giao theo yêu cầu, không phải tag Git đã xác nhận.
-
-> URL GitHub Pages ở trên được suy ra từ tên tài khoản và repository trong `origin`. Không có cấu hình Pages hoặc bằng chứng truy cập triển khai trong workspace; trạng thái hoạt động cần được xác nhận trên GitHub hoặc trình duyệt trước khi bàn giao.
+- **Mã nguồn đối chiếu tại thời điểm ghi tài liệu:** `f6035acb64da6d015ef546cd70065d04a30f6ab7` (`main`, `origin/main`). Lịch sử hiện có tag `v1`
 
 ## Cấu trúc thực tế
 
