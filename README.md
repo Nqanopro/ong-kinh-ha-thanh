@@ -1,48 +1,74 @@
-# Ống Kính Hà Thành – Website Câu lạc bộ Nhiếp ảnh & Khám phá Đô thị Hà Nội
+# Ống Kính Hà Thành
 
-## Thông tin dự án
+## Tên sản phẩm và tác giả
 
-Website tĩnh giới thiệu câu lạc bộ nhiếp ảnh và các hoạt động khám phá đô thị Hà Nội. Trang chủ có phần giới thiệu, triển lãm ảnh, lịch workshop/photowalk và biểu mẫu đăng ký minh họa; `ket-qua.html` trình bày trạng thái sau khi trình duyệt kiểm tra biểu mẫu.
+**Ống Kính Hà Thành** — Nguyễn Quốc Anh, MSV: 2071020006, Lớp CNTT 20-04.
 
-- **Tác giả:** Nguyễn Quốc Anh — MSV: 2071020006 — Lớp CNTT 20-04, Trường Đại học Đại Nam.
-- **Repository:** [github.com/Nqanopro/ong-kinh-ha-thanh](https://github.com/Nqanopro/ong-kinh-ha-thanh)
-- **GitHub Pages:** [https://nqanopro.github.io/ong-kinh-ha-thanh/](https://nqanopro.github.io/ong-kinh-ha-thanh/)
-- **Nguồn xuất bản dự kiến:** nhánh `main`, thư mục `/` (root).
-- **Mã nguồn đối chiếu tại thời điểm ghi tài liệu:** `f6035acb64da6d015ef546cd70065d04a30f6ab7` (`main`, `origin/main`). Lịch sử hiện có tag `v1`
+## Sản phẩm này là gì?
 
-## Cấu trúc thực tế
+Đây là website tĩnh HTML5/CSS3 giới thiệu Câu lạc bộ Nhiếp ảnh & Khám phá Đô thị Hà Nội (Ống Kính Hà Thành). Website trưng bày ảnh kèm chú thích, giới thiệu lịch Workshop/Photowalk định kỳ và có biểu mẫu đăng ký mô phỏng.
+
+## Bản dùng thử và mã nguồn
+
+- **GitHub Pages:** <https://nqanopro.github.io/ong-kinh-ha-thanh/>
+- **Repository:** <https://github.com/Nqanopro/ong-kinh-ha-thanh>
+
+Trang Pages hiện phản hồi HTTP 200 nhưng tại thời điểm kiểm tra vẫn hiển thị bản trước, dùng ba ảnh ở `assets/images/`. Phiên bản v3 trong hồ sơ này chưa được đẩy lên GitHub; cần cập nhật nhánh `main` và xác nhận lại trang Pages trước khi giới thiệu đây là bản trực tuyến cuối cùng.
+
+## Tính năng chính
+
+1. Điều hướng cuộn mượt tới ba phân mục: **Triển lãm**, **Lịch sinh hoạt** và **Tham gia CLB**.
+2. Phần giới thiệu có ảnh banner và số liệu hoạt động câu lạc bộ.
+3. Triển lãm góc nhìn thành viên hiển thị ba thẻ ảnh responsive, dùng `<figure>` và `<figcaption>`.
+4. Bảng lịch Workshop định kỳ và biểu mẫu đăng ký dùng ràng buộc HTML5; dữ liệu hợp lệ được gửi bằng `GET` sang `ket-qua.html`.
+
+## Cách mở và sử dụng
+
+1. Mở <https://nqanopro.github.io/ong-kinh-ha-thanh/> sau khi bản v3 được xuất bản; hoặc mở `index.html` trực tiếp trong trình duyệt hay chạy qua Live Server.
+2. Nhấn **Triển lãm**, **Lịch sinh hoạt** hoặc **Tham gia CLB** trên thanh điều hướng để tới từng khu vực nội dung.
+3. Tại mục **Đăng ký tham gia cùng câu lạc bộ**, nhập họ tên, email và thông tin thiết bị; nhấn **Kiểm tra & Gửi đăng ký** để thử luồng xác nhận sang `ket-qua.html`.
+
+## Cấu trúc thư mục
 
 ```text
 ong-kinh-ha-thanh/
 ├── assets/
-│   └── images/
-│       ├── pic1.jpg
-│       ├── pic2.jpg
-│       └── pic3.jpg
+│   ├── anh-banner-pho-ha-noi.jpg
+│   ├── ca-phe-pho.jpg
+│   ├── do-thi-ben-song.jpg
+│   └── ha-noi-pho-co.jpg
 ├── css/
 │   └── styles.css
+├── docs/
+│   ├── AI_LOG.md
+│   ├── evidence-index.md
+│   └── evidence/
+│       ├── 01-desktop-1440px.png
+│       ├── 02-mobile-320px.png
+│       ├── 03-form-validation-error.png
+│       └── 04-form-submit-ket-qua.png
 ├── index.html
 ├── ket-qua.html
 ├── README.md
-├── AI_LOG.md
-└── RELEASE_NOTES.md
+└── CHANGELOG.md
 ```
 
-## Mở và kiểm tra trên máy
+## Nguồn xuất bản và tài nguyên
 
-1. Mở `index.html` trực tiếp bằng trình duyệt; các tệp CSS và ảnh dùng đường dẫn tương đối. Hoặc mở thư mục dự án trong VS Code và chạy `index.html` bằng tiện ích Live Server.
-2. Kiểm tra các kích thước viewport 320px, 640px, 960px và 1440px. CSS dùng bố cục nền một cột, chuyển lưới ảnh sang hai cột từ 640px và ba cột từ 960px; điều hướng được phép xuống dòng.
-3. Cuộn tới **Triển lãm**: xác nhận ba ảnh tải từ `assets/images/` và từng ảnh nằm trong `<figure>` có `<figcaption>`.
-4. Cuộn tới **Lịch Workshop & Photowalk**: kiểm tra bảng; ở viewport hẹp bảng có vùng cuộn ngang trong `.table-wrap`.
-5. Tại biểu mẫu, gửi khi trường bắt buộc còn trống để xem kiểm tra gốc của trình duyệt. Nhập họ tên (2–80 ký tự), email hợp lệ và nội dung (10–500 ký tự), sau đó gửi. Form dùng `GET` và điều hướng tới `ket-qua.html`; dữ liệu được truyền qua tham số URL, không được lưu trên máy chủ.
+- Cấu hình xuất bản được yêu cầu: GitHub Pages từ nhánh `main`, thư mục `/(root)`. Bản v3 cần được đồng bộ lên nhánh này và xác nhận trong **Settings → Pages**.
+- Bốn tệp JPEG trong `assets/` được lưu cục bộ từ tư liệu Unsplash; ba ảnh dùng trong triển lãm, ảnh banner là bản cắt ngang từ ảnh phố Hà Nội. Phông chữ Be Vietnam Pro và Lora được nhúng từ Google Fonts.
+- Nội dung lịch sinh hoạt và số liệu câu lạc bộ là dữ liệu mô phỏng phục vụ đồ án.
 
-Đây là các bước kiểm tra đề xuất; tài liệu không khẳng định chúng đã được chạy trong phiên bàn giao này.
+## Đã kiểm tra
 
-## GitHub Pages
+Các kết quả kiểm thử và ảnh chụp được ghi trong [docs/evidence-index.md](./docs/evidence-index.md).
 
-Repository hiện có nhánh `main` và các trang HTML ở thư mục gốc, phù hợp với nguồn `main` / được yêu cầu. Cấu hình triển khai không nằm trong các tệp đang có ở workspace. Có thể kiểm tra hoặc đặt tại **Repository → Settings → Pages**, chọn deploy từ nhánh `main`, thư mục `/(root)`, rồi mở URL Pages ở trên để xác nhận.
+## Hạn chế và phần chưa kiểm tra
 
-## Tài liệu bàn giao
+- Biểu mẫu chỉ kiểm tra dữ liệu trên trình duyệt rồi gửi bằng `GET`; chưa gửi email hoặc lưu dữ liệu vào cơ sở dữ liệu.
+- Đã kiểm tra giao diện giả lập ở độ rộng 320px và 375px; chưa kiểm tra trên iPhone vật lý.
+- Bản v3 trong workspace chưa được xuất bản lên GitHub Pages.
 
-- [Nhật ký sử dụng AI và quyết định của sinh viên](AI_LOG.md)
-- [Ghi chú phát hành](RELEASE_NOTES.md)
+## Khai báo sử dụng AI
+
+Nhật ký sử dụng AI và phần em rà soát, chỉnh sửa được ghi tại [docs/AI_LOG.md](./docs/AI_LOG.md).
